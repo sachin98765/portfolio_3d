@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser"
 import { slideIn } from "../utils/motion"
 import { EarthCanvas } from "./canvas"
 
+
 const Contact = () => {
   const formRef = useRef()
   const [form, setForm] = useState({
@@ -15,8 +16,47 @@ const Contact = () => {
   })
   const [loading, setLoading] = useState(false)
 
-  const handleChange = (e) => {}
-  const handleSubmit = (e) => {}
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+
+    setForm({
+      ...form,
+      [name]: value,
+    })
+  }
+
+  //zgkwTrRUh56cMq_Jf
+//template_26kxt4i
+//service_y5k8rwx
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setLoading(true)
+
+    emailjs
+      .send('service_y5k8rwx', 'template_26kxt4i', 
+        {
+        from_name: form.name,
+        to_name: "Sam",
+        from_email: form.email,
+        to_email: 'mahato963592@gmail.com',
+        message: form.message,
+      }, 'zgkwTrRUh56cMq_Jf')
+      .then(() => {
+        setLoading(false)
+        alert("Thank you. I will get back to you as soon as possible.")
+        setForm({
+          name: "",
+          email: "",
+          message: "",
+        })
+      },error => {
+        setLoading(false)
+        console.log(error)
+        alert("Something went wrong.")
+      })
+  }
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
