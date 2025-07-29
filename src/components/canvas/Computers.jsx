@@ -1,13 +1,13 @@
-import React, { Suspense, useEffect, useMemo, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 // Component: 3D model scene
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.glb"); // use optimized .glb instead of .gltf
+  const computer = useGLTF("./desktop_pc/scene.glb");
 
-  const scene = useMemo(() => (
+  return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
@@ -26,12 +26,10 @@ const Computers = ({ isMobile }) => {
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
-  ), [isMobile, computer]);
-
-  return scene;
+  );
 };
 
-// Component: Canvas wrapper
+// Canvas wrapper
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -46,20 +44,6 @@ const ComputersCanvas = () => {
     mediaQuery.addEventListener("change", handleMediaQueryChange);
     return () => mediaQuery.removeEventListener("change", handleMediaQueryChange);
   }, []);
-
-  // On mobile: fallback to image or nothing to improve INP
-  if (isMobile) {
-    return (
-      <div className="flex justify-center items-center">
-        <img
-          src="/static/3d-placeholder.png"
-          alt="3D model preview"
-          className="w-full max-w-xs"
-          loading="lazy"
-        />
-      </div>
-    );
-  }
 
   return (
     <Canvas
