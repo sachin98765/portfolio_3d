@@ -23,6 +23,8 @@ import {
     jobit,
     tripguide,
     threejs,
+    weather,
+    upcoming,
   } from "../assets";
   
   export const navLinks = [
@@ -211,67 +213,141 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      name: "Url Shortner",
+      description: "A web-based tool that converts long URLs into short, shareable links with tracking capabilities.",
       tags: [
         {
-          name: "react",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "JavaScript",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "TypeScript",
           color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
         },
         {
           name: "supabase",
-          color: "green-text-gradient",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "html",
+          color: "orange-text-gradient",
         },
         {
           name: "css",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: carrent,
+      source_code_link: "https://url-shortener-lac-omega.vercel.app/",
+    },
+    {
+      name: "PSW Generator",
+      description: "A secure password generator that creates strong, customizable passwords to enhance user security and privacy online.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "JavaScript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Tailwind CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "HTML",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "CSS",
+          color: "orange-text-gradient",
+        },
+      ],
+      image: jobit,
+      source_code_link: "https://psw-generator-blush.vercel.app/",
+    },
+    {
+      name: "Note App",
+      description: "A clean and intuitive note-taking app that lets users create, edit, delete, and organize notes with ease, enhancing productivity and focus.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "JavaScript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "HTML",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwind CSS",
+          color: "orange-text-gradient",
+        },  
+      ],
+      image: tripguide,
+      source_code_link: "https://note-app-seven-steel.vercel.app/",
+    },
+    {
+      name: "Weather App",
+      description: "A weather application that provides real-time weather updates and forecasts for locations worldwide.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "JavaScript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "CSS",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "HTML",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwind CSS",
+          color: "orange-text-gradient",
+        },
+      ],
+      image: weather,
+      source_code_link: "https://weatherapp-rho-lyart.vercel.app/",
+    },
+    {
+      name: "Tailwind Project",
+      description: "A visually polished single-page interface built with Tailwind CSS, showcasing modern UI components and responsive design best practices.",
+      tags: [
+    
+        {
+          name: "HTML",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "Tailwind CSS",
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: upcoming,
+      source_code_link: "#",
     },
   ];
   
